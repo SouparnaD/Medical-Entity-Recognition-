@@ -1,0 +1,336 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Medical Entity Recognition</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#problem_statement">Problem Statement</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#datasets">Datasets</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#preprocessing">Data Preprocessing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#models">Models Used</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#results">Results</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#awards">External Links</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+      <div class="w-100">
+        <h2 class="mb-3">Medical Entity Recognition
+          <!-- <span class="text-primary">Taylor</span> -->
+        </h2>
+        <p class="lead mb-3 text-justify">Medical Entity Recognition is a crucial step towards efficient medical texts analysis. For this project, the medical entities which might be one single term or a sequence of terms should be one of the following categories - Disease, Symptoms, Drugs, Test, Treatment. Social media sites, such as Twitter, can be a rich source of many kinds of information, including health-related information. Accurate detection of entities such as diseases, drugs, and symptoms could be used for biosurveillance (e.g. monitoring of flu) and identification of adverse drug events. This task becomes difficult on tweets as they are known to be full of slang and doesn't guarantee enough context for information extraction.</p>
+        <p class="lead mb-3 text-justify">
+            Traditional MERs are used on formal medical texts, such as published medical studies, research articles, clinical reports, discharge summaries and Electronic Health Records. In this project, we will evaluate the performance of various existing MERs on Twitter data and try to improve its performance on tweets. 
+        </p>
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="problem_statement">
+      <div class="w-100">
+        <h2 class="mb-3">Problem Statement</h2>
+          <p class="lead mb-5 text-justify">
+            Named Entity Recognition can automatically scan entire articles and reveal which are the major people, organizations, and places discussed in them. Knowing the relevant tags for each article help in automatically categorizing the articles in defined hierarchies and enable smooth content discovery. Medical Entity Recognition (MER) aims to identify and classify the portions of text which span medical entity mentions. The entity types are fixed and known in advance. In this project the entity types to be recognized are Drug, Disease, Symptom, Treatment and Test. Traditional MERs are used on formal medical texts, such as published medical studies, research articles, clinical reports, discharge summaries and Electronic Health Records. In this project, we will evaluate the performance of various existing MERs on Twitter data and try to improve its performance on tweets. 
+          </p>
+        
+      </div>
+
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="datasets">
+      <div class="w-100">
+        <h2 class="mb-3">Datasets</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">CADEC Dataset</h3>
+            
+            <div>
+              <p class="lead  text-justify">
+                CSIRO Adverse Drug Event Corpus (Cadec) is a rich annotated corpus of medical forum posts on patient reported Adverse Drug Events (ADEs). This corpus is useful for those studies in the area of information extraction, or more generically text mining, from social media to detect possible adverse drug reactions from direct patient reports. This dataset has 1250 files of text and its annotations.
+              </p>
+            </div>
+            
+          </div>
+          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Twimed Dataset</h3>            
+            <p class="lead mb-3 text-justify"s>
+              This dataset aims  to provide a comparable corpus of texts from PubMed and Twitter that can be used to study drug reports from these two sources of information, allowing researchers in the area of pharmacovigilance using natural language processing (NLP) to perform experiments to better understand the similarities and differences between drug reports in Twitter and PubMed. This dataset contains 521 tweets.
+            </p>
+          </div>          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Micromed Dataset</h3>            
+            <p class="lead mb-3 text-justify"s>
+              This dataset consists of tweet annotations with medical entities. We focuses on three types of entities: Disease (T047 in UMLS), Symptoms (T184), and Pharmacologic Substance (T121). 
+            </p>
+          </div>          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Twitter Dataset</h3>            
+            <p class="lead mb-3 text-justify"s>
+              Downloaded Twitter dump of first 10 days of November from <a href="https://archive.org/details/twitterstream">here</a> in json format. The size of dump was more than 100 GB. We had filtered out 121MB from 180 GB of data, which has 4,42,203 samples. 
+            </p>
+          </div>          
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="preprocessing">
+      <div class="w-100">
+        <h2 class="mb-3">Data Preprocessing</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">CADEC Dataset</h3>
+            
+            <div>
+              <p class="lead  text-justify">
+                In CADEC dataset, data is in the form of 'brat-flavored standoff' with a .txt and a .ann extension files which should be converted to usabel CSV format. We created a script which reduces the 'brat-flavored standoff' to a text format and labelling every word from .ann file. This text file is then converted to a CSV.
+              </p>
+            </div>
+            
+          </div>
+          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Twimed Dataset</h3>            
+            <p class="lead mb-3 text-justify">
+              This dataset also follows 'brat-flavored standoff' format that contains tweet ids of the tweets. To convert the dataset into a  CSV format, we created a script similar to one above.
+            </p>
+          </div>          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Micromed Dataset</h3>            
+            <p class="lead mb-3 text-justify">
+              This dataset is of .linejson format, with tweet IDs as keys, and ‘type’ contains type of annotation that a word belongs to, and an attribute of json type named ‘location’ has two keys ‘start’ and ‘end’, which tells us where in the text that word is starting and where it is ending. The data has lot of discrepancies where pointer are very different from the actual occurences of the words. This had to be rectified manually, file by file basis. This resulted in addition of 370 tweets to the dataset as many of the tweets were either deleted or were from the accounts which got deactivated. Since we had a script to get CSV from 'brat-flavored standoff', we converted the data into the required format to use the script.
+            </p>
+          </div>          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Twitter Dataset</h3>            
+            <p class="lead mb-3 text-justify">
+              We discarded all the tweets that were not of medical domain. After filtering all the data we removed emojis, links, mentions and retweets from tweets, just to make data more clear, and then we annotated them to create a CSV so that, it will be ready to use by models. We had filtered out 121MB from 180 GB of data, which has 4,42,203 samples. 
+            </p>
+          </div>          
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="models">
+      <div class="w-100">
+        <h2 class="mb-3">Models Used</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">Bi-LSTM Model</h3>
+            <p class="lead mb-1 text-justify">
+              A bidirectional LSTM is a combination of two LSTMs — one runs forward from “right to left” and one runs backward from “left to right”. So, the whole context information can be captured using bi-directional LSTM unlike the traditional LSTM model. Model configurations are mentioned below:
+            </p>
+            <div>
+              <ul class='fa-ul mb-0'>
+                <li >40 dimensional word-embeddings have been used</li>
+                <li>The max length of each sentence is restricted to 75 words</li>
+                <li>128 nodes of bi-directional LSTM is used</li>
+                <li>Model has a dense fully connected layer</li>
+              </ul>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">Bi-LSTM-CRF Model</h3>     
+            <p  class="lead mb-1 text-justify">
+              We combined the bidirectional LSTM network and a CRF network to form a BI-LSTM-CRF network . In addition to the past input features and sentence level tag information that is used in a LSTM-CRF model, a BI-LSTM-CRF model can use the future input features also. The extra features can boost tagging accuracy. Model configurations are mentioned below:
+            </p>
+            <ul class='fa-ul mb-0'>
+                <li>BATCH_SIZE = 512 (Number of examples used in each iteration)</li>
+                <li>EPOCHS = 100 (Number of passes through entire dataset)</li>
+                <li>MAX_LEN = 60 (Max length of review (in words))</li>
+                <li>EMBEDDING = 200 (Dimension of word embedding vector)</li>
+              </ul>
+          </div>          
+        </div>
+
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">ELMo (Embedding from Language Models)</h3>      
+            <p class="lead mb-1 text-justify">
+              ELMo has a great understanding of the language because it’s trained on a massive dataset, ELMo embeddings are trained on the 1 Billion Word Benchmark. the training is called bidirectional language model (biLM) that can learn from the past and predict the next word in a sequence of words like a sentence. We used this model and it performed very well with the new twitter dataset with the following parameters:
+            </p>      
+            <ul class='fa-ul mb-0'>
+                <li>BATCH_SIZE = 512 (Number of examples used in each iteration)</li>
+                <li>EPOCHS = 6 (Number of passes through entire dataset)</li>
+                <li>MAX_LEN = 25 (Max length of review (in words))</li>
+              </ul>
+          </div>          
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="results">
+      <div class="w-100">
+        <h2 class="mb-3">Results</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">Bi-LSTM Model</h3>
+            <p class="lead mb-1 text-justify">
+              The result of the model trained and tested on CADEC dataset is as follows:
+            </p>
+            <img class="img-fluid" src="img/BiLSTM_Result.jpg" alt="">            
+          </div>
+          
+        </div>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">Bi-LSTM-CRF Model</h3>    
+            <p class="lead mb-1 text-justify">
+              On training this model on CADEC dataset, accuracy of the model is approximately 88%. Reason behind high accuracy on twitter dataset and low for CADEC is less data and different tags present in CADEC dataset as compared to Twitter dataset i.e. Twitter dataset is missing some tags present in CADEC. 
+              The result of the model trained and tested on twitter dataset is as follows:
+            </p>
+            <img class="img-fluid" src="img/BiLSTMCRF_Result.jpg" alt="">
+          </div>          
+        </div>
+
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0">ELMo (Embedding from Language Models)</h3>      
+            <p class="lead mb-1 text-justify">
+              The result of the model trained and tested on Twitter dataset is as follows:
+            </p>
+            <img class="img-fluid" src="img/ELMO_Results.jpg" alt="">
+          </div>          
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="external_links">
+      <div class="w-100">
+        <h2 class="mb-3">External Links</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0"><a href = "https://www.youtube.com/watch?v=G_ponwb-wDY&feature=youtu.be">Youtube Video </a></h3>
+            
+          </div>
+          
+        </div>  
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+          <div class="resume-content">
+            <h3 class="mb-0"><a href = "https://github.com/ankitmishra16/Medical-Entity-Recognition">Github Link </a></h3>
+            
+          </div>
+          
+        </div> 
+
+      </div>
+
+    </section>
+
+
+
+   
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
